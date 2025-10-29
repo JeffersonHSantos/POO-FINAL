@@ -1,6 +1,13 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Home</ion-title>
+    <ion-title>
+      <a href="index.html" style="color: white; text-decoration: none; margin-right: 15px;">🏠 Início</a> |
+      <a href="home.html" style="color: white; text-decoration: none; margin: 0 15px;">🏡 Home</a> |
+      <a href="cadastro.html" style="color: white; text-decoration: none; margin: 0 15px;">👤 Cadastro</a> |
+      <a href="usuarios.html" style="color: white; text-decoration: none; margin: 0 15px;">👥 Usuários</a> |
+      <a href="produtos.html" style="color: white; text-decoration: none; margin: 0 15px;">📦 Produtos</a> |
+      <a href="#" onclick="logout()" style="color: white; text-decoration: none; margin-left: 15px;">🚪 Sair</a>
+    </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="logout()">
         <ion-icon name="log-out-outline"></ion-icon>
@@ -8,6 +15,7 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content class="ion-padding">
   <h2>Seja bem-vindo, {{ user?.username }}!</h2>
