@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      
+      <a href="home.html" style="color: white; text-decoration: none; margin: 0 15px;">🏡 Home</a> |
+      <a href="cadastro.html" style="color: white; text-decoration: none; margin: 0 15px;">👤 Cadastro</a> |
+      <a routerLink="/usuarios" style="color: white; text-decoration: none; margin: 0 15px;">👥 Usuários</a> |
+      <a href="produtos.html" style="color: white; text-decoration: none; margin: 0 15px;">📦 Produtos</a>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  
+  <h2>Lista de Usuários</h2>
+    <div>
+        <button onclick="window.location.href='usuarios_incluir.html'" style="background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 15px;">
+            ➕ Incluir Novo Usuário
+        </button>
+        <input type="text" id="search" placeholder="Buscar por nome ou usuário">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Primeiro Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Email</th>
+                    <th>Data de Aniversário</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody id="users-table"></tbody>
+        </table>
+        <div class="pagination" id="pagination"></div>
+    </div>
+    
+
+
+
+
+</ion-content>

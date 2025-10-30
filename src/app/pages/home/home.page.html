@@ -1,12 +1,11 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>
-      <a href="index.html" style="color: white; text-decoration: none; margin-right: 15px;">🏠 Início</a> |
+      
       <a href="home.html" style="color: white; text-decoration: none; margin: 0 15px;">🏡 Home</a> |
       <a href="cadastro.html" style="color: white; text-decoration: none; margin: 0 15px;">👤 Cadastro</a> |
-      <a href="usuarios.html" style="color: white; text-decoration: none; margin: 0 15px;">👥 Usuários</a> |
-      <a href="produtos.html" style="color: white; text-decoration: none; margin: 0 15px;">📦 Produtos</a> |
-      <a href="#" onclick="logout()" style="color: white; text-decoration: none; margin-left: 15px;">🚪 Sair</a>
+      <a routerLink="/usuarios" style="color: white; text-decoration: none; margin: 0 15px;">👥 Usuários</a> |
+      <a href="produtos.html" style="color: white; text-decoration: none; margin: 0 15px;">📦 Produtos</a>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="logout()">
