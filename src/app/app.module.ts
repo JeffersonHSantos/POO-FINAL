@@ -11,10 +11,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

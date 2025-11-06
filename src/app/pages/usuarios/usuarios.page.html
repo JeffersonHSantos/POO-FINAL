@@ -17,32 +17,26 @@
 
 
 
-<ion-content [fullscreen]="true">
-  
-  <h2>Lista de Usuários</h2>
-    <div>
-        <button onclick="window.location.href='usuarios_incluir.html'" style="background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 15px;">
-            ➕ Incluir Novo Usuário
-        </button>
-        <input type="text" id="search" placeholder="Buscar por nome ou usuário">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Primeiro Nome</th>
-                    <th>Sobrenome</th>
-                    <th>Email</th>
-                    <th>Data de Aniversário</th>
-                    <th>Editar</th>
-                </tr>
-            </thead>
-            <tbody id="users-table"></tbody>
-        </table>
-        <div class="pagination" id="pagination"></div>
-    </div>
-    
+<ion-content class="ion-padding">
 
+  <ion-searchbar [(ngModel)]="searchTerm" placeholder="Buscar usuário"></ion-searchbar>
 
+  <ion-grid>
+    <ion-row class="header">
+      <ion-col>ID</ion-col>
+      <ion-col>Nome</ion-col>
+      <ion-col>Email</ion-col>
+      <ion-col>Aniversário</ion-col>
+      <ion-col>Endereço</ion-col>
+    </ion-row>
 
+    <ion-row *ngFor="let user of filteredUsers">
+      <ion-col>{{user.id }}</ion-col>
+      <ion-col>{{ user.firstName }} {{ user.lastName }}</ion-col>
+      <ion-col>{{ user.email }}</ion-col>
+      <ion-col>{{ user.birthDate }}</ion-col>
+      <ion-col>{{ user.address.address }} - {{ user.address.city }}</ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -7,20 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class UsuariosService {
 
-  private apiUrl = 'https://dummyjson.com/users';
+  private jsonUrl = 'assets/data/usuarios.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  listarUsuarios(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  getUsuarios(): Observable<any[]> {
+    return this.http.get<any[]>(this.jsonUrl);
   }
-
-  buscarUsuarioPorId(id: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/${id}`);
-  }
-
-  atualizarUsuario(id: number, dados: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, dados);
-  }
-
 }
